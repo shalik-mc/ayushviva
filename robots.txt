@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shalik-mc.github.io/ayushviva/sitemap.xml
