@@ -1,543 +1,1061 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="google-site-verification" content="KNLoOVH-LUvHgNceM-TrgBpFal22i0_yPWApONm2dVc" />
-    <title>Ayushviva | Premium Wellness Products</title>
-    <style>
-      /* Base Reset & Variables */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
 
-      :root {
-        --primary: #1b4d3e; /* Elegant wellness green */
-        --secondary: #d4af37; /* Premium gold accent */
-        --dark: #222222;
-        --light: #f9f9f9;
-        --white: #ffffff;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      body {
-        background-color: var(--light);
-        color: var(--dark);
-        line-height: 1.6;
-      }
+    <title>AyushViva | Natural Wellness & Healthy Living</title>
 
-      /* Header & Navigation */
-      header {
-        background-color: #ffffff;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+    <meta name="description"
+        content="AyushViva - Your trusted wellness partner. Discover premium natural health products for heart health, immunity, skincare, weight management and overall wellbeing.">
 
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 40px;
-      }
+    <meta name="keywords"
+        content="AyushViva, wellness, health, Ayurveda, iPulse, iGlow, iCare, iSlim, nutrition">
 
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      .logo img {
-        height: 50px; /* Adjust based on your logo design */
-        object-fit: contain;
-      }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-      .logo span {
-        font-size: 24px;
-        font-weight: 700;
-        color: var(--primary);
-        letter-spacing: 1px;
-      }
-      .nav-links {
-        display: flex;
-        gap: 28px;
-        align-items: center;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: #444;
-        font-weight: 600;
-        transition: 0.3s;
-      }
-      .nav-links a:hover {
-        color: #1b4d3e;
-      }
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
-      .main-shop-btn {
-        background-color: #1b4d3e;
-        color: #fff;
-        text-decoration: none;
-        padding: 12px 28px;
-        border-radius: 30px;
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        transition: 0.3s;
-      }
+</head>
 
-      .main-shop-btn:hover {
-        background: color #12372c;
-      }
+<body>
 
-      /* Hero Section */
-      .hero {
-        background:
-          linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-          url("https://www.indusvivaipulse.com/images/hero-background.jpg")
-            center/cover no-repeat;
+    <!--================ NAVBAR ================-->
 
-        color: var(--white);
-        text-align: center;
-        padding: 80px 20px;
-      }
+    <header class="header">
 
-      .hero h1 {
-        font-size: 42px;
-        margin-bottom: 15px;
-        letter-spacing: 1px;
-        color: #222222;
-      }
+        <div class="container nav-container">
 
-      .hero p {
-        font-size: 18px;
-        max-width: 700px;
-        margin: 0 auto 30px auto;
-        opacity: 0.9;
-        color: #222222;
-      }
+            <a href="#" class="logo">
 
-      /* Products Grid */
-      .products-section {
-        max-width: 1200px;
-        margin: 60px auto;
-        padding: 0 20px;
-      }
+                <img src="logo.png" alt="AyushViva Logo">
 
-      .section-title {
-        text-align: center;
-        font-size: 32px;
-        color: var(--primary);
-        margin-bottom: 40px;
-        position: relative;
-      }
+                <span>AyushViva</span>
 
-      .section-title::after {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 3px;
-        background-color: var(--secondary);
-        margin: 10px auto 0 auto;
-      }
+            </a>
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-      }
+            <nav class="navbar">
 
-      /* Product Cards */
-      .card {
-        background-color: var(--white);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        display: flex;
-        flex-direction: column;
-      }
+                <ul class="nav-links">
 
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      }
+                    <li><a href="#home">Home</a></li>
 
-      .card-image-placeholder {
-        height: 260px;
-        border-radius: 10px 10px 0 0;
-        width: 100%;
-        overflow: hidden;
-      }
+                    <li><a href="#about">About</a></li>
 
-      /* Optional real image style inside placeholder box */
-      .card-image-placeholder img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
+                    <li><a href="#products">Products</a></li>
 
-      .card-content {
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
+                    <li><a href="#business">Business</a></li>
 
-      .card-title {
-        font-size: 22px;
-        color: var(--primary);
-        margin-bottom: 10px;
-      }
+                    <li><a href="#testimonials">Reviews</a></li>
 
-      .card-tag {
-        align-self: flex-start;
-        background-color: rgba(212, 175, 55, 0.15);
-        color: #b38f19;
-        font-size: 12px;
-        font-weight: 700;
-        padding: 4px 10px;
-        border-radius: 4px;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-      }
+                    <li><a href="#contact">Contact</a></li>
 
-      .card-text {
-        font-size: 15px;
-        color: #555;
-        margin-bottom: 25px;
-        flex-grow: 1;
-      }
+                </ul>
 
-      .shop-now-btn {
-        display: block;
-        text-align: center;
-        background-color: var(--primary);
-        color: var(--white);
-        text-decoration: none;
-        padding: 12px;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: background-color 0.2s ease;
-      }
+            </nav>
 
-      .shop-now-btn:hover {
-        background-color: #123329;
-      }
+            <div class="nav-buttons">
 
-      /* Disclaimer Footer */
-      footer {
-        background-color: var(--dark);
-        color: #999;
-        padding: 40px 20px;
-        text-align: center;
-        font-size: 14px;
-        margin-top: 80px;
-      }
+                <a href="#products" class="btn btn-outline">
+                    Shop
+                </a>
 
-      footer p {
-        max-width: 800px;
-        margin: 0 auto 15px auto;
-      }
+                <a href="https://wa.me/918606073042?text=I%20want%20to%20know%20about%20AyushViva"
+                    target="_blank" class="btn btn-primary">
+                    Get Started
+                </a>
 
-      .copyright {
-        color: #666;
-        margin-top: 20px;
-        border-top: 1px solid #333;
-        padding-top: 20px;
-      }
+                <div class="menu-toggle">
 
-      /* Responsive Layout fixes */
-      @media (max-width: 600px) {
-        .nav-container {
-          flex-direction: column;
-          gap: 15px;
-        }
-        .hero h1 {
-          font-size: 32px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header & Brand Bar -->
-    <header>
-      <div class="nav-container">
-        <div class="logo">
-          <img src="logo.png" alt="Ayushviva Logo" />
-          <span>AYUSHVIVA</span>
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <nav class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#contact">Contact</a>
-
-          <a
-            href="https://store.indusviva.com/?id=1224663&token=MTIyNDY2My8xNzc2ODc3NzU="
-            target="_blank"
-            class="main-shop-btn"
-            style="color: #fff"
-          >
-            Visit Store
-          </a>
-        </nav>
-      </div>
     </header>
 
-    <!-- Hero Content Showcase -->
+    <!--================ HERO ================-->
+
     <section class="hero" id="home">
-      <h1>Premium Wellness for a Vibrant Life</h1>
-      <p>
-        Explore the official product lineup of IndusViva. Order directly from an
-        authorized distributor for genuine products and fast fulfillment.
-      </p>
-      <a
-        href="https://store.indusviva.com/?id=1224663&token=MTIyNDY2My8xNzc2ODc3NzU="
-        target="_blank"
-        class="main-shop-btn"
-        style="background-color: #013615; color: #fff; padding: 12px 30px"
-        >Shop All Products</a
-      >
+
+        <div class="container hero-container">
+
+            <div class="hero-left">
+
+                <span class="hero-badge">
+
+                    🌿 Trusted Wellness Partner
+
+                </span>
+
+                <h1>
+
+                    Transform Your Health Naturally
+                    <span>with AyushViva</span>
+
+                </h1>
+
+                <p>
+
+                    Discover premium wellness products designed to support
+                    heart health, immunity, metabolism, beauty and everyday
+                    vitality.
+
+                    Live healthier.
+                    Feel stronger.
+                    Stay energized.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#products" class="btn btn-primary">
+
+                        Explore Products
+
+                    </a>
+
+                    <a href="#business" class="btn btn-outline">
+
+                        Business Opportunity
+
+                    </a>
+
+                </div>
+
+                <div class="hero-features">
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                        <span>Heart Health</span>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                        <span>Natural Wellness</span>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                        <span>Ayurvedic Inspired</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="hero-image">
+
+                    
+                </div>
+
+                <div class="floating-card card-one">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    <div>
+
+                        <h4>Premium Quality</h4>
+
+                        <p>Trusted Wellness Products</p>
+
+                    </div>
+
+                </div>
+
+                <div class="floating-card card-two">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <h4>Happy Customers</h4>
+
+                        <p>Growing Every Day</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-wave"></div>
+
     </section>
 
-    <!-- Product Grid Showcase -->
-    <section class="products-section" id="products">
-      <h2 class="section-title">Our Premium Range</h2>
+    <!--================ STATS ================-->
 
-      <div class="grid">
-        <!-- iPulse Card -->
-        <div class="card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://vivaipulse.com/wp-content/uploads/2022/07/ipulse-1024x1024.jpg"
-              alt="Dark glass bottle of iPulse antioxidant beverage with label displaying the product name, positioned centrally on a bright colorful background surrounded by fresh raspberries, blueberries, and orange citrus slices. The energetic arrangement conveys vitality and wellness benefits."
-            />
-            iPulse Bottle Image
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Antioxidant Drink</span>
-            <h3 class="card-title">iPulse</h3>
-            <p class="card-text">
-              An advanced multi-fruit blend powered by the premium Amazonian
-              Acai Berry. Delivers 7,000 essential ORAC units of antioxidants
-              per serving to boost immunity, counter fatigue, and protect
-              cardiovascular health.
-            </p>
-            <a href="ipulse.html" class="shop-now-btn">Learn More</a>
-          </div>
-        </div>
+    <section class="stats">
 
-        <!-- iCoffee Card -->
-        <div class="card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://indusviva.com/assets/2-B7CM4eaj.jpg"
-              alt="Glass jar of iCoffee blend with label displaying product name, positioned on a wooden kitchen counter. Roasted coffee beans are scattered artfully around the jar on the warm-toned surface. The composition evokes a calm, comforting morning routine and the aroma of freshly brewed coffee."
-            />
-            iCoffee Image
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Sugar Management</span>
-            <h3 class="card-title">iCoffee</h3>
-            <p class="card-text">
-              Premium coffee blended expertly with Salacia reticulata
-              (Ekanayakam). Specially designed to help seamlessly regulate
-              healthy blood sugar levels and manage overall metabolic wellness
-              naturally.
-            </p>
+        <div class="container stats-container">
 
-            <a href="icoffee.html" class="shop-now-btn">Learn More</a>
-          </div>
+            <div class="stat-box">
+
+                <h2>100%</h2>
+
+                <p>Natural Wellness Focus</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>4+</h2>
+
+                <p>Premium Products</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>24/7</h2>
+
+                <p>Customer Support</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>∞</h2>
+
+                <p>Healthy Possibilities</p>
+
+            </div>
+
         </div>
 
-        <!-- iGlow Card -->
-        <div class="card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaL-09KE5ocFeS_SUSN4FexMGpvYyc22c-mw&s"
-              alt="iGlow wellness and beauty supplement product with natural golden appearance in elegant packaging. The product formulation contains plant collagen, saffron, and natural botanical extracts designed to promote skin radiance and hydration."
-            />
-            iGlow Image
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Wellness &amp; Beauty</span>
-            <h3 class="card-title">iGlow</h3>
-            <p class="card-text">
-              An ingestible natural skincare formulation containing plant
-              collagen, saffron, and powerful natural extracts. Promotes inner
-              radiant glow, deeper skin hydration, and cell structural
-              integrity.
-            </p>
-            <a href="iglow.html" class="shop-now-btn">Learn More</a>
-          </div>
-        </div>
-        <!-- iSlim Card -->
-        <div class="card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://www.indusvivaipulse.com/images/iSlim3.jpg"
-              alt="iSlim"
-            />
-            iSlim Image
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Weight Management</span>
-            <h3 class="card-title">iSlim Flat Tummies</h3>
-            <p class="card-text">
-              A delicious, nutrient-dense meal replacement bar containing
-              patented FB3 herbal compounds. Formulated to help safely manage
-              weight, control cravings, and effectively boost metabolic rate.
-            </p>
-            <a href="islim.html" class="shop-now-btn">Learn More</a>
-          </div>
-        </div>
-        <!-- iCare Card -->
-        <div class="card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTA0z6F4T9TgLlaFa0u2vQLfqj-aB1vGDtgVp9MUvg3A&s"
-              alt="iCare"
-            />
-            iCare Image
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Women's Wellness</span>
-            <h3 class="card-title">iCare</h3>
-            <p class="card-text">
-              A unique liquid formulation enriched with Incurin Complex,
-              Shatavari, and Ashwagandha. Crafted intentionally to support
-              hormonal balance, bone density, and stress management for women.
-            </p>
-            <a href="icare.html" class="shop-now-btn">Learn More</a>
-          </div>
-        </div>
-      </div>
     </section>
-    <section class="contact-section" id="contact">
-      <h2>Contact Us</h2>
-      <p>Have questions about our products? We'd love to help you.</p>
 
-      <div class="contact-card">
-        <h3>Ayushviva Wellness</h3>
+    <!-- ABOUT SECTION STARTS IN PART 2 -->
+     <!--================ ABOUT SECTION ================-->
 
-        <p><strong>👤 Name:</strong> SHALIK MC</p>
+    <section class="about section" id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>ABOUT AYUSHVIVA</span>
+
+                <h2>Your Journey Towards Better Health Starts Here</h2>
+
+                <p>
+                    AyushViva is committed to helping individuals achieve a
+                    healthier lifestyle through premium wellness solutions,
+                    education, and personalized guidance.
+                </p>
+
+            </div>
+
+            <div class="about-container">
+
+                <div class="about-image">
+
+                    <img src="logo.png" alt="About AyushViva">
+
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                        <div>
+
+                            <h3>Natural Wellness</h3>
+
+                            <p>
+                                Wellness solutions inspired by nature to
+                                support a healthier lifestyle.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                        <div>
+
+                            <h3>Healthy Living</h3>
+
+                            <p>
+                                Products designed to help maintain everyday
+                                health and vitality.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                        <div>
+
+                            <h3>Personal Guidance</h3>
+
+                            <p>
+                                We help you choose wellness products based on
+                                your health goals.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/918606073042?text=I%20want%20to%20know%20about%20iCoffee" class="btn btn-primary" target="_blank">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--================ PRODUCTS ================-->
+
+    <section class="products section" id="products">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>OUR PRODUCTS</span>
+
+                <h2>Featured Wellness Collection</h2>
+
+                <p>
+                    Discover our premium wellness products carefully selected
+                    to support different aspects of your health.
+                </p>
+
+            </div>
+
+            <div class="product-grid">
+
+                <!-- iCoffee -->
+
+<div class="product-card">
+
+    <div class="product-image">
+
+        <img src="https://indusviva.com/assets/3-C4vuRaHg.jpg" alt="iCoffee">
+
+    </div>
+
+    <div class="product-content">
+
+        <h3>iCoffee</h3>
 
         <p>
-          <strong>📞 Phone:</strong>
-          <a href="tel:+918606073042">+91 86060 73042</a>
+            A wellness coffee blend designed to support natural energy,
+            focus, and metabolism as part of a balanced lifestyle.
         </p>
 
-        <p>
-          <strong>📧 Email:</strong>
-          <a href="mailto:your@email.com">shalikmc8606@email.com</a>
-        </p>
+        <ul>
 
-        <p><strong>📍 Location:</strong> Kerala, India</p>
+            <li><i class="fa-solid fa-check"></i> Natural Energy Support</li>
 
-        <a href="https://wa.me/918606073042" class="whatsapp-btn">
-          Chat on WhatsApp
+            <li><i class="fa-solid fa-check"></i> Mental Focus</li>
+
+            <li><i class="fa-solid fa-check"></i> Metabolism Balance</li>
+
+        </ul>
+
+        <a href="icoffee.html" class="btn btn-primary">
+
+            Learn More
+
         </a>
-      </div>
+
+    </div>
+
+</div>
+
+                <!-- iPulse -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://indusviva.com/assets/2-Dl_AOkhZ.jpg" alt="iPulse">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>iPulse</h3>
+
+                        <p>
+                            Supports heart health, energy production,
+                            circulation and antioxidant protection.
+                        </p>
+
+                        <ul>
+
+                            <li><i class="fa-solid fa-check"></i> Heart Wellness</li>
+
+                            <li><i class="fa-solid fa-check"></i> Rich in Antioxidants</li>
+
+                            <li><i class="fa-solid fa-check"></i> Daily Vitality</li>
+
+                        </ul>
+
+                        <a href="ipulse.html" class="btn btn-primary">
+
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- iCare -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://indusviva.com/assets/3-FF4rNP3x.jpg" alt="iCare">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>iCare</h3>
+
+                        <p>
+                            Daily nutritional support to help maintain
+                            immunity and overall wellbeing.
+                        </p>
+
+                        <ul>
+
+                            <li><i class="fa-solid fa-check"></i> Immunity Support</li>
+
+                            <li><i class="fa-solid fa-check"></i> Nutritional Care</li>
+
+                            <li><i class="fa-solid fa-check"></i> Everyday Wellness</li>
+
+                        </ul>
+
+                        <a href="icare.html" class="btn btn-primary">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- iGlow -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://indusviva.com/assets/2-CzsuhmGw.jpg" alt="iGlow">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>iGlow</h3>
+
+                        <p>
+                            Nourishes your skin from within while supporting
+                            beauty and healthy-looking skin.
+                        </p>
+
+                        <ul>
+
+                            <li><i class="fa-solid fa-check"></i> Skin Care</li>
+
+                            <li><i class="fa-solid fa-check"></i> Beauty Nutrition</li>
+
+                            <li><i class="fa-solid fa-check"></i> Healthy Glow</li>
+
+                        </ul>
+
+                        <a href="iglow.html" class="btn btn-primary">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- iSlim -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="https://indusviva.com/assets/1-Dw208i7e.jpg" alt="iSlim">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>iSlim</h3>
+
+                        <p>
+                            Supports healthy weight management when combined
+                            with a balanced diet and active lifestyle.
+                        </p>
+
+                        <ul>
+
+                            <li><i class="fa-solid fa-check"></i> Weight Management</li>
+
+                            <li><i class="fa-solid fa-check"></i> Metabolism Support</li>
+
+                            <li><i class="fa-solid fa-check"></i> Healthy Lifestyle</li>
+
+                        </ul>
+
+                        <a href="islim.html"
+                           target="_blank"
+                           class="btn btn-primary">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
-    <footer>
-      <p>
-        <strong>Independent Distributor Website:</strong>This page is operated
-        by an independent distributor of IndusViva products. All brand names,
-        product formulatin, trademarks, and assosiated media assets are
-        properties of Indusviva Healthsciences pvt. Ltd.
-      </p>
-      <p>
-        <strong>Disclaimer:</strong> Indusviva products are classified as
-        proprietary Ayurvedic medicines or wellness supplements. They are
-        designed to promote overall well-being and are not intended to diagnose,
-        treat, cure, or prevent any illness or medical conditions.
-      </p>
 
-      <div class="copyright">&copy; 2026 Ayushviva. All rights reserved.</div>
-    </footer>
 
-    <style>
-      footer {
-        width: 100%;
-        background-color: #1b4d3e;
-        color: #ffffff;
-        padding: 40px 20px;
-        text-align: center;
-        margin-top: 80px;
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-          url("logo.png");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .contact-section {
-        padding: 70px 20px;
-        background: #f8f7f2;
-        text-align: center;
-      }
+        
 
-      .contact-section h2 {
-        color: #1b4d3e;
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
+    <!--================ WHY CHOOSE US ================-->
 
-      .contact-section p {
-        color: #555;
-      }
+    <section class="why-us section">
 
-      .contact-card {
-        max-width: 500px;
-        margin: 35px auto;
-        background: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      }
+        <div class="container">
 
-      .contact-card h3 {
-        color: #1b4d3e;
-        margin-bottom: 20px;
-      }
+            <div class="section-title">
 
-      .contact-card p {
-        margin: 15px 0;
-        font-size: 17px;
-      }
+                <span>WHY CHOOSE US</span>
 
-      .contact-card a {
-        color: #1b4d3e;
-        text-decoration: none;
-      }
+                <h2>Wellness You Can Trust</h2>
 
-      .whatsapp-btn {
-        display: inline-block;
-        margin-top: 20px;
-        background: #013615;
-        color: #fff !important;
-        padding: 14px 30px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-      }
+            </div>
 
-      .whatsapp-btn:hover {
-        background: #1faa52;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </body>
-</html>
+            <div class="why-grid">
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                    <h3>Natural Ingredients</h3>
+
+                    <p>
+                        Carefully selected ingredients inspired by nature.
+                    </p>
+
+                </div>
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <h3>Quality Focus</h3>
+
+                    <p>
+                        Premium wellness products with high manufacturing
+                        standards.
+                    </p>
+
+                </div>
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>Customer Support</h3>
+
+                    <p>
+                        Dedicated assistance before and after your purchase.
+                    </p>
+
+                </div>
+
+                <div class="why-card">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    <h3>Trusted Brand</h3>
+
+                    <p>
+                        Helping families embrace healthier lifestyles every day.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BUSINESS SECTION STARTS IN PART 3 -->
+     <!--================ BUSINESS OPPORTUNITY ================-->
+
+    <section class="business section" id="business">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>BUSINESS OPPORTUNITY</span>
+
+                <h2>Build Your Wellness Business with AyushViva</h2>
+
+                <p>
+                    Start your journey as an independent wellness entrepreneur.
+                    Help people achieve better health while creating an additional
+                    source of income through product sales and network growth.
+                </p>
+
+            </div>
+
+            <div class="business-container">
+
+                <div class="business-image">
+
+                    <img src="https://imgv2-2-f.scribdassets.com/img/document/513238736/original/60d9f88e03/1?v=1" alt="Business Opportunity">
+
+                </div>
+
+                <div class="business-content">
+
+                    <div class="business-card">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                        <div>
+
+                            <h3>Become a Partner</h3>
+
+                            <p>
+                                Join our growing wellness community and expand
+                                your business with confidence.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="business-card">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <div>
+
+                            <h3>Growth Potential</h3>
+
+                            <p>
+                                Build long-term customer relationships and
+                                develop your business step by step.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="business-card">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                        <div>
+
+                            <h3>Training & Support</h3>
+
+                            <p>
+                                Receive guidance, resources, and mentorship to
+                                help you grow your business.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/918606073042?text=I%20want%20to%20know%20about%20the%20business%20opportunity" class="btn btn-primary">
+                        Become a Partner
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--================ CALL TO ACTION ================-->
+
+    <section class="cta">
+
+        <div class="container cta-container">
+
+            <h2>Take the First Step Towards Better Health</h2>
+
+            <p>
+                Explore our premium wellness products and discover solutions
+                designed to support your healthy lifestyle.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="#products" class="btn btn-primary">
+                    Explore Products
+                </a>
+
+                <a href="https://wa.me/918606073042?text=I%20want%20to%20know%20about%20the%20products" class="btn btn-outline">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--================ TESTIMONIALS ================-->
+
+    <section class="testimonials section" id="testimonials">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>TESTIMONIALS</span>
+
+                <h2>What Our Customers Say</h2>
+
+            </div>
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        "Excellent customer service and quality wellness
+                        products. Highly recommended!"
+                    </p>
+
+                    <div class="customer">
+
+                        <img src="images/user1.jpg" alt="Customer">
+
+                        <div>
+
+                            <h4>Rahul M.</h4>
+
+                            <span>Happy Customer</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        "Professional guidance helped me choose the right
+                        products for my lifestyle."
+                    </p>
+
+                    <div class="customer">
+
+                        <img src="images/user2.jpg" alt="Customer">
+
+                        <div>
+
+                            <h4>Anjali S.</h4>
+
+                            <span>Verified Buyer</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        "A wonderful experience from consultation to delivery.
+                        Looking forward to ordering again."
+                    </p>
+
+                    <div class="customer">
+
+                        <img src="images/user3.jpg" alt="Customer">
+
+                        <div>
+
+                            <h4>Faisal K.</h4>
+
+                            <span>Regular Customer</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--================ FAQ ================-->
+
+    <section class="faq section" id="faq">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>FAQ</span>
+
+                <h2>Frequently Asked Questions</h2>
+
+            </div>
+
+            <div class="faq-container">
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Are AyushViva products suitable for daily use?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Usage depends on the individual product and its
+                            instructions. Always follow the recommended
+                            directions on the label and consult a healthcare
+                            professional if you have medical concerns.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        How do I place an order?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Contact us through WhatsApp, phone, or the contact
+                            form, and we'll guide you through the ordering
+                            process.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Can I become a business partner?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. We welcome individuals who are interested in
+                            building a wellness business. Reach out to us for
+                            more information about partnership opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Do you provide customer support?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Absolutely. We're here to answer your questions,
+                            help you choose suitable products, and provide
+                            ongoing support.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- CONTACT & FOOTER START IN PART 4 -->
+    <!--================ FOOTER ================-->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-about">
+
+            <img src="logo.png" alt="AyushViva Logo" class="footer-logo">
+
+            <h3>AyushViva</h3>
+
+            <p>
+                Helping people build healthier lifestyles through natural wellness products,
+                guided support, and a growing wellness community.
+            </p>
+
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-links">
+
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="footer-products">
+
+            <h4>Products</h4>
+
+            <ul>
+                <li><a href="#products">iPulse</a></li>
+                <li><a href="#products">iCare</a></li>
+                <li><a href="#products">iGlow</a></li>
+                <li><a href="#products">iSlim</a></li>
+            </ul>
+
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-social">
+
+            <h4>Follow Us</h4>
+
+            <div class="social-icons">
+
+                <a href="https://www.facebook.com/ayushviva"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ayushviva?igsh=MTg1cTBuc2RxM3UyZQ=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@ayushviva"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/918606073042"><i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 <strong>AyushViva</strong>. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
